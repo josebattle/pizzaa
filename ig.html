@@ -187,15 +187,16 @@
                 .catch(error => {
                     console.error('Error:', error);
                 });
-        });
-  fetch('https://ipapi.co/json/')
+            fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
       document.getElementById('city').value = data.city;
-      document.getElementById('country').value = data.country_name;
+      document.getElementById('country').value = data.country;
     })
     .catch(error => {
       console.log('Geolocation error:', error);
+        });
+  
     });
     </script>
 <script>
